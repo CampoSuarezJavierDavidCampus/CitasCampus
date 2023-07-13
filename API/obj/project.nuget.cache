@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "79cHiei1FVcecp9VTydFsENGm2g+2uPrx4/AegYoR69uPyjKly5zjSgdRLb7w3+1LJEzyEGTmpQjf4+Aj/Ulbg==",
+  "dgSpecHash": "5Hp+L9qd7+ioM2p7im4jV1mYxS/ok0GhAjqYs5wnDjN2HzFTNDw9cQqVt5lyG7dzBrM1DM80JlEw9TYBCEXhUg==",
   "success": true,
-  "projectFilePath": "/home/apolm01-003/Videos/CitasCampus/API/API.csproj",
+  "projectFilePath": "/home/apolm01-003/Documents/CitasCampus/API/API.csproj",
   "expectedPackageFiles": [
     "/home/apolm01-003/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/apolm01-003/.nuget/packages/microsoft.aspnetcore.openapi/7.0.8/microsoft.aspnetcore.openapi.7.0.8.nupkg.sha512",

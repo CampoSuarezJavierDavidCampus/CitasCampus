@@ -11,8 +11,6 @@ public class EstadoController:BaseController{
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<Estado>>> Get(){
-        return await _context.Estados.ToListAsync();
-    }
+    public async Task<ActionResult<IEnumerable<Estado>>> Get()=>Ok(await _context.Estados.ToListAsync());
         
 }

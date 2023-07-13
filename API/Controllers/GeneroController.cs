@@ -10,5 +10,5 @@ public class GeneroController:BaseController{
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<Genero>>> Get()=> await _context.Generos.ToListAsync();
+    public async Task<ActionResult<IEnumerable<Genero>>> Get()=> Ok(await _context.Generos.ToListAsync());
 }

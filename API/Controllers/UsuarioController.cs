@@ -10,5 +10,5 @@ public class UsuarioController:BaseController{
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<Usuario>>> Get()=> await _context.Usuarios.ToListAsync();
+    public async Task<ActionResult<IEnumerable<Usuario>>> Get()=> Ok(await _context.Usuarios.ToListAsync());
 }

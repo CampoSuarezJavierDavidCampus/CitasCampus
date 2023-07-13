@@ -10,5 +10,5 @@ public class MedicoController:BaseController{
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<Medico>>> Get()=> await _context.Medicos.ToListAsync();
+    public async Task<ActionResult<IEnumerable<Medico>>> Get()=> Ok(await _context.Medicos.ToListAsync());
 }

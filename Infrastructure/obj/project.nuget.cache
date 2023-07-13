@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5PcN96AdhDG/fBRTAYGmCb976R/1hn5e0h3MeBEkFmfCOQlAEwoDSi6t24ZjtlIr6DYfO8rQ6oJY7oWWYEAywA==",
+  "dgSpecHash": "qehj5oK3s0vJ6RiFavuzYDgYRwvoQHy2RgSuaDoAVwyvt5xRq/JkrPvE+aTTAyTAlLCt7T9nae272q8MdVrWEg==",
   "success": true,
-  "projectFilePath": "/home/apolm01-003/Videos/CitasCampus/Infrastructure/Infrastructure.csproj",
+  "projectFilePath": "/home/apolm01-003/Documents/CitasCampus/Infrastructure/Infrastructure.csproj",
   "expectedPackageFiles": [
     "/home/apolm01-003/.nuget/packages/microsoft.entityframeworkcore/7.0.9/microsoft.entityframeworkcore.7.0.9.nupkg.sha512",
     "/home/apolm01-003/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.9/microsoft.entityframeworkcore.abstractions.7.0.9.nupkg.sha512",

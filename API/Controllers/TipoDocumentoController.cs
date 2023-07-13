@@ -10,5 +10,5 @@ public class TipoDocumentoController:BaseController{
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<TipoDocumento>>> Get()=> await _context.TipoDocumentos.ToListAsync();
+    public async Task<ActionResult<IEnumerable<TipoDocumento>>> Get()=> Ok(await _context.TipoDocumentos.ToListAsync());
 }

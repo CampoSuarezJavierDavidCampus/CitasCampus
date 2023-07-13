@@ -10,8 +10,6 @@ public class EspecialidadController: BaseController{
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<Especialidad>>> Get(){
-        return await _context.Especialidades.ToListAsync();
-    }
+    public async Task<ActionResult<IEnumerable<Especialidad>>> Get()=>Ok(await _context.Especialidades.ToListAsync());
     
 }
