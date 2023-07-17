@@ -101,9 +101,8 @@ public class UnitOfWork : IUnitOfWork,IDisposable
         }
     }
 
-    public int Save()
-    {
-        throw new NotImplementedException();
+    public async Task<int> SaveAsync(){
+        return await _context.SaveChangesAsync();
     }
 
     public ICitasAPIEntity<TipoDocumento, int> TipoDocumentos

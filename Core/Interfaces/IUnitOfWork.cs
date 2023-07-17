@@ -13,5 +13,5 @@ public interface IUnitOfWork
     ICitasAPIEntity<TipoDocumento,int> TipoDocumentos{get;}
     ICitasAPIEntity<Usuario,int> Usuarios{get;}
     
-    int Save();
+    Task<int> SaveAsync();
 }
