@@ -1,3 +1,6 @@
+using Core.Interfaces;
+using Infrastructure.UnitOfWork;
+
 namespace API.Extensions;
 //Configurar las politicas cors
 public static class ApplicationServiceExtension{
@@ -12,5 +15,9 @@ public static class ApplicationServiceExtension{
             );
         }
     );
+
+    public static void AddApplicationServices(this IServiceCollection services){
+        services.AddScoped<IUnitOfWork,UnitOfWork>();
+    }
     
 }

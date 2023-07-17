@@ -1,14 +1,20 @@
 using Core.Entities;
-using Infrastructure.Data;
+using Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers;
 public class TipoDocumentoController:BaseController{
-    private readonly CitasCampusContext _context;    
-    public TipoDocumentoController(CitasCampusContext context)=>_context = context;
+    
+    private readonly IUnitOfWork _unitOfWork;
+    public TipoDocumentoController(IUnitOfWork unitOfWork)=> _unitOfWork = unitOfWork;
+
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<TipoDocumento>>> Get()=> Ok(await _context.TipoDocumentos.ToListAsync());
+    public async Task<ActionResult<IEnumerable<TipoDocumento>>> Get()=>Ok(await _unitOfWork.TipoDocumentos.GetAllAsync());
+
+    [HttpGet("{id}")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<IEnumerable<TipoDocumento>>> Get(int id)=> Ok(await _unitOfWork.TipoDocumentos.GetByIdAsync(id));
 }
