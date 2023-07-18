@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/skylab-141/Music/CitasCampus/Infrastructure/Infrastructure.csproj": {}
+    "/home/apolm01-003/Documents/CitasCampus/Infrastructure/Infrastructure.csproj": {}
   },
   "projects": {
-    "/home/skylab-141/Music/CitasCampus/Core/Core.csproj": {
+    "/home/apolm01-003/Documents/CitasCampus/Core/Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/skylab-141/Music/CitasCampus/Core/Core.csproj",
+        "projectUniqueName": "/home/apolm01-003/Documents/CitasCampus/Core/Core.csproj",
         "projectName": "Core",
-        "projectPath": "/home/skylab-141/Music/CitasCampus/Core/Core.csproj",
-        "packagesPath": "/home/skylab-141/.nuget/packages/",
-        "outputPath": "/home/skylab-141/Music/CitasCampus/Core/obj/",
+        "projectPath": "/home/apolm01-003/Documents/CitasCampus/Core/Core.csproj",
+        "packagesPath": "/home/apolm01-003/.nuget/packages/",
+        "outputPath": "/home/apolm01-003/Documents/CitasCampus/Core/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/skylab-141/.nuget/NuGet/NuGet.Config"
+          "/home/apolm01-003/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -57,17 +57,17 @@
         }
       }
     },
-    "/home/skylab-141/Music/CitasCampus/Infrastructure/Infrastructure.csproj": {
+    "/home/apolm01-003/Documents/CitasCampus/Infrastructure/Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/skylab-141/Music/CitasCampus/Infrastructure/Infrastructure.csproj",
+        "projectUniqueName": "/home/apolm01-003/Documents/CitasCampus/Infrastructure/Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "/home/skylab-141/Music/CitasCampus/Infrastructure/Infrastructure.csproj",
-        "packagesPath": "/home/skylab-141/.nuget/packages/",
-        "outputPath": "/home/skylab-141/Music/CitasCampus/Infrastructure/obj/",
+        "projectPath": "/home/apolm01-003/Documents/CitasCampus/Infrastructure/Infrastructure.csproj",
+        "packagesPath": "/home/apolm01-003/.nuget/packages/",
+        "outputPath": "/home/apolm01-003/Documents/CitasCampus/Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/skylab-141/.nuget/NuGet/NuGet.Config"
+          "/home/apolm01-003/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -79,8 +79,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/home/skylab-141/Music/CitasCampus/Core/Core.csproj": {
-                "projectPath": "/home/skylab-141/Music/CitasCampus/Core/Core.csproj"
+              "/home/apolm01-003/Documents/CitasCampus/Core/Core.csproj": {
+                "projectPath": "/home/apolm01-003/Documents/CitasCampus/Core/Core.csproj"
               }
             }
           }
