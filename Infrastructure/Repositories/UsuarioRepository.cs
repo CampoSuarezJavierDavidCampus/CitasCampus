@@ -18,7 +18,9 @@ public class UsuarioRepository : ICitasAPIEntity<Usuario, int>
 
     public async Task<ICollection<Usuario>> GetAllAsync()=>await _context.Set<Usuario>().ToListAsync();
 
-    public async Task<Usuario> GetByIdAsync(int id)=>(await _context.Set<Usuario>().FindAsync(id))!;
+    public async Task<Usuario> GetByIdAsync(int id){
+        return await _context.Set<Usuario>().FindAsync(id);
+    }
 
     public void Remove(Usuario entity)=>_context.Set<Usuario>().Remove(entity);
 

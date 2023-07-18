@@ -16,9 +16,16 @@ public class GeneroRepository : ICitasAPIEntity<Genero, int>
 
     public IEnumerable<Genero> Find(Expression<Func<Genero, bool>> expression)=>_context.Set<Genero>().Where(expression);
 
-    public async Task<ICollection<Genero>> GetAllAsync()=>await _context.Set<Genero>().ToListAsync();
+    public async Task<ICollection<Genero>> GetAllAsync()
+    {
+        return await _context.Generos.Include(g => g.Usuarios).ToListAsync();
+    }
 
-    public async Task<Genero> GetByIdAsync(int id)=>(await _context.Set<Genero>().FindAsync(id))!;
+    public async Task<Genero> GetByIdAsync(int id){
+        return (await _context.Generos
+            .Include(g => g.Usuarios)
+            .FirstOrDefaultAsync(g => g.Id == id))!;
+    }
 
     public void Remove(Genero entity)=>_context.Set<Genero>().Remove(entity);
 

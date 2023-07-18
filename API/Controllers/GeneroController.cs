@@ -1,27 +1,32 @@
+using API.DTOs;
+using AutoMapper;
 using Core.Entities;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers;
 public class GeneroController:BaseController{
-    
+    private readonly IMapper _mapper;
     private readonly IUnitOfWork _unitOfWork;
-    public GeneroController(IUnitOfWork unitOfWork)=> _unitOfWork = unitOfWork;
+    public GeneroController(IUnitOfWork unitOfWork, IMapper mapper){
+        _unitOfWork = unitOfWork;
+        _mapper = mapper;
+    }
 
     [HttpGet]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<Genero>>> Get(){
-        var nameVar = await _unitOfWork.Generos.GetAllAsync();
-        return Ok(nameVar);
+    public async Task<ActionResult<IEnumerable<GeneroDto>>> Get(){
+        var generos = await _unitOfWork.Generos.GetAllAsync();
+        return Ok( _mapper.Map<List<GeneroDto>>(generos));
     }
 
     [HttpGet("{id}")]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<IEnumerable<Genero>>> Get(int id){
-        var nameVar = await _unitOfWork.Generos.GetByIdAsync(id);
-        return Ok(nameVar);
+    public async Task<ActionResult<IEnumerable<GeneroDto>>> Get(int id){
+        var generos = await _unitOfWork.Generos.GetByIdAsync(id);
+        return _mapper.Map<List<GeneroDto>>(generos);
     }
 
     [HttpPost]
